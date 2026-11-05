@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #c9d6ff 0%, #e2e2e2 100%);
+    color: #2d3748;
+    padding: 40px 15px;
+    min-height: 100vh;
+}
+
+/* Container Utama Berkesan Melayang (Card Elevation) */
+.container {
+    max-width: 850px;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(15, 76, 129, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Navigasi Modern (2 Kartu Berwarna & Terpisah Tegas) */
+nav {
+    display: flex;
+    gap: 18px; /* Jarak terpisah yang jelas */
+    margin-bottom: 35px;
+}
+
+/* Tombol Sebelum Diklik (Biru Soft Elegan, BUKAN Putih) */
+nav a {
+    flex: 1;
+    text-align: center;
+    background-color: #dceafb; /* Warna latar biru soft agar beda dari kontainer */
+    color: #0f4c81;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 16px 20px;
+    border-radius: 14px;
+    border: 2px solid #b3d1ff;
+    box-shadow: 0 4px 10px rgba(15, 76, 129, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efek Hover (Saat Diarahkan Kursor) */
+nav a:hover {
+    background-color: #1b6ca8;
+    color: #ffffff;
+    border-color: #1b6ca8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(27, 108, 168, 0.3);
+}
+
+/* Tombol Aktif (Halaman yang Sedang Dibuka - Gradasi Biru Tua Menyala) */
+nav a.active {
+    background: linear-gradient(135deg, #0f4c81 0%, #1b6ca8 100%);
+    color: #ffffff;
+    border-color: #0f4c81;
+    box-shadow: 0 8px 22px rgba(15, 76, 129, 0.4);
+}
+
+/* Header Profil Diri (Nama Kiri, Foto Bulat Kanan) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    border-bottom: 2px dashed #cbd5e1;
+}
+
+.profile-title h1 {
+    color: #0f4c81;
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Foto Bulat Ring Ganda di Sebelah Kanan */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    outline: 4px solid #1b6ca8;
+    box-shadow: 0 10px 25px rgba(27, 108, 168, 0.35);
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Judul Bagian / Section */
+h2 {
+    color: #0f4c81;
+    margin: 35px 0 18px 0;
+    font-size: 1.45rem;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    background: linear-gradient(to bottom, #0f4c81, #3b82f6);
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+/* Kartu "Tentang Saya" Modern */
+.about-me {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+    padding: 24px;
+    border-left: 6px solid #1b6ca8;
+    border-radius: 14px;
+    font-size: 1.02rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Tabel Data Elegan */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+th {
+    background: linear-gradient(135deg, #0f4c81 0%, #1b6ca8 100%);
+    color: #ffffff;
+    padding: 16px;
+    text-align: left;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+td {
+    padding: 14px 18px;
+    background-color: #ffffff;
+    font-size: 0.98rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+tr:hover td {
+    background-color: #f0f9ff;
+}
+
+/* List / Daftar Keahlian */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Quote Profil Keluarga */
+blockquote {
+    font-style: italic;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 6px solid #0f4c81;
+    padding: 20px 25px;
+    margin: 30px 0;
+    color: #1e40af;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    border-top: 2px solid #f1f5f9;
+    padding-top: 25px;
+}
