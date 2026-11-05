@@ -1,0 +1,10 @@
+#judul {
+    color: blue;
+}
+.teks-merah {
+    color: red;
+}
+a[title] {
+    teks-decoration: none;
+    color: green;
+}
